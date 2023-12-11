@@ -11,7 +11,7 @@ describe('Test Forms', async () =>{
         await form.turnSwitch()
         await form.selectOpt(5)
         await form.pushBtn()
-        await $('//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="This app is awesome"]').click()
+        expect (await formScreen.getDropdownResult()).toEqual('webdriver.io is awesome')
 
      });
 })
